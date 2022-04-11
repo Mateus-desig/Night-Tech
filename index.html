@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="https://static.thenounproject.com/png/564150-200.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Night tech</title>
+</head>
+<body>
+
+       <img class="logo-mobile" src="img/Logo.png" alt="logo">
+       <input type="checkbox" id="bt_menu" />
+       <label for="bt_menu">&#9776;</label> 
+
+        <nav class="menu">
+            <img src="img/Logo.png" alt="logo">
+            <ul>
+                <li><a href="#">Produtos</a>
+                    <ul>
+                        <li><a href="#">Smartwatch</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    <div id="body_box">
+        <div class="asside">
+            <div class="corpo">
+                <div class="produto">
+                    <h2>QUEIMA DE ESTOQUE</h2>
+                    <h3>O melhor lugar para quem gosta de pagar barato</h3>
+                    <img src="img/smart.webp" alt="Smart">
+                    <h3>Smartwatch P8</h3>
+                    <p>R$:0,00</p>
+                    <div class="timer"></div>
+                </div>
+            </div>
+            <div class="side_bar">
+                <section class="form">
+                    <div class="form_box">
+                        <form action="#" method="post">
+                            <label for="name">
+                                Seu Nome <span>*</span>
+                                <div class="input-icons">
+                                    <i class="material-icons">person</i>
+                                    <input type="text" name="name" id="name" required placeholder="Seu Nome:">
+                                </div>
+                            </label>
+                            <label for="email">
+                                Seu E-mail <span>*</span>
+                                <div class="input-icons">
+                                    <i class="material-icons">mail</i>
+                                    <input type="email" name="email" id="email" required placeholder="Seu email:">
+                                </div>
+                            </label>
+                            <label for="cep">
+                                Seu Cep <span>*</span>
+                                <div class="input-icons">
+                                    <i class="material-icons">takeout_dining</i>
+                                    <input name="cep" type="text" id="cep" required placeholder="Seu Cep:" onblur="pesquisacep(this.value);" />
+                                </div>
+                            </label>
+
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="rua">
+                                            Sua Rua <span>*</span>
+                                            <div class="input-icons">
+                                                <i class="material-icons">add_road</i>
+                                                <input type="text" name="rua" id="rua" required placeholder="Sua Rua:">
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label for="cidade">
+                                            Sua Cidade <span>*</span>
+                                            <div class="input-icons">
+                                                <i class="material-icons">location_city</i>
+                                                <input type="text" name="cidade" id="cidade" required placeholder="Sua Cidade:">
+                                            </div>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="bairro">
+                                            Seu Bairro <span>*</span>
+                                            <div class="input-icons">
+                                                <i class="material-icons">apartment</i>
+                                                <input type="text" name="bairrom" id="bairro" required placeholder="Seu Bairro:">
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label for="numero">
+                                            Seu Numero <span>*</span>
+                                            <div class="input-icons">
+                                                <i class="material-icons">pin</i>
+                                                <input type="number" name="numero" id="numero" required placeholder="Numero:">
+                                            </div>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <label for="phone">
+                                Seu Telefone <span>*</span>
+                                <div class="input-icons">
+                                    <i class="material-icons">phone</i>
+                                    <input type="tel" name="phone" id="phone" required placeholder="(99) 123-456-789">
+                                </div>
+                            </label>
+                            <input type="submit" name="submit" id="btn_form" value="Fazer pedido">
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+        <footer class="footer">
+            <div class="footer_box">
+                <div class="title-footer">Night tech</div>
+                <div class="contato">
+                    <a href="#">Contato</a>
+                </div>
+                <p>Night tech Online © <?php echo date('Y'); ?></p>
+            </div>
+        </footer>
+</body>
+    <script src="js/cepAPI.js"></script>
+    <script src="js/timer.js"></script>
+</html>

@@ -1,0 +1,264 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+body{
+    background-color: hsl(0, 12%, 97%);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    color: #fafafa;
+    font-family:"Open Sans", Helvetica, Arial, sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+#body_box{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* asside e corpo */
+.asside{
+    display: flex;
+}
+.side_bar{
+    width: 60%;
+}
+.corpo{
+    width: 100%;
+}
+.corpo .produto{
+    width: 52%;
+    height: 481px;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+}
+.corpo .produto h2{
+    text-align: center;
+}
+.corpo .produto p{
+    display: inline-block;
+    font-size: 15pt;
+    color: rgb(8, 192, 8);
+    margin-top: 8px;
+}
+.timer{
+    float: right;
+    font-size: 20pt;
+    color: red;
+}
+.corpo .produto img{
+    width: 350px;
+}
+/* MENU */
+.menu {
+    width: 100%;
+    height: 66px;
+    background-color: #000000;
+    font-family: Arial;
+}
+.menu img{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.logo-mobile{
+    display: none;
+}
+.menu ul {
+    list-style: none;
+    position: relative;
+}
+.menu ul li {
+    width: 150px;
+    float: left;
+}
+.menu a {
+    padding: 23px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #000000;
+    color: #fafafa;
+}
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+}
+.menu ul li:hover ul {
+    visibility: visible;
+}
+.menu a:hover {
+    background-color: #2e2e2e;
+    transition: all 0.4s;
+}
+.menu ul ul li {
+    float: none;
+    border-bottom: solid 1px #ccc;
+}
+.menu ul ul li a {
+    background-color: #1c1c1c;
+}
+label[for='bt_menu']{
+    padding: 5px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+}
+label[for='bt_menu']:hover{
+    color: rgb(182, 23, 23);
+    transition: all 0.6s;
+}
+label[for='bt_menu']:not(:hover){
+    color: #fafafa;
+    transition: all 0.6s;
+}
+#bt_menu {
+    display: none;
+}
+label[for='bt_menu']{
+    display: none;
+}
+/* FORMULARIO */
+.form{
+    display: block;
+    width: 98%;
+}
+.form .form_box{
+    margin: 0 auto;
+    margin-top: 17%;
+    margin-bottom: 17%;
+    background-color: rgb(24, 24, 24);
+    box-shadow: 0px 0px 12px 0px #383838;
+    border-radius: 10px;
+    padding: 15px;
+}
+.input-icons{
+    display: flex;
+}
+.input-icons i{
+    padding: 11px;
+    background-color: #ffffff;
+    color: #000000;
+    border-right: 1px solid #e2dede;
+}
+.form .form_box form span{
+    color: red;
+}
+.form .form_box form input{
+    width: 85%;
+    height: 36px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.form .form_box form input[type=submit]{
+    margin-top: 10px;
+    padding: 5px;
+    width: 125px;
+    color: #fafafa;
+    font-size: 14pt;
+    background-color: #2e2e2e;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form .form_box form input[type=submit]:hover{
+    transition: all 0.5s;    
+    background-color: #383838;
+}
+/* FOOTER */
+.footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+.footer .footer_box{
+    position: relative;
+    background-color: #000000;
+    height: 55px;
+}
+.footer .footer_box .title-footer{
+    font-size: 20pt;
+    text-align: center;
+}
+.footer .footer_box .contato{
+    position: absolute;
+    top: 30%;
+    right: 5px;
+    margin-right: 10px;
+}
+.footer .footer_box .contato a{
+    color: #ffffff;
+    font-size: 14pt;
+}
+.footer .footer_box a:hover{
+    transition: all 0.5s;
+    color: #9e9898;
+}
+.footer .footer_box p{
+    position: absolute;
+    top: 30%;
+    left: 5px;
+}
+/* Modo mobile */
+@media(max-width: 800px){
+    /* Menu mobile */
+    label[for='bt_menu'] {
+        display: block;
+    }
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+    .menu{
+        position: absolute;
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    .menu img{
+        display: none;
+    }
+    .logo-mobile{
+        display: block;
+        position: absolute;
+        right: 2px;
+        width: 166px;
+    }
+    .menu ul li {
+        width: 100%;
+        float: none;
+    }
+    .menu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 4s;
+    }
+    .menu ul li:hover ul {
+        height: auto;
+        max-height: 200px;
+    }
+    /* Asside mobile */
+    .asside{
+        display: block;
+    }
+    .side_bar{
+        width: 100%;
+    }
+    .corpo .produto{
+        width: 98%;
+    }
+    /* Footer mobile */
+    .footer .footer_box .title-footer{
+        font-size:15pt;
+    }
+    .footer .footer_box p{
+        top: 50%;
+    }
+}
